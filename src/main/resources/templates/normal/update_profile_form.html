@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base::layout(~{::section})}">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>User Dashboard</title>
+</head>
+
+<body>
+	<section>
+		<div class="card mr-3 ml-3 bg-info">
+			<div class="card-body">
+				<div class="container text-center">
+					<form th:action="@{/user/process-update-profile}" enctype="multipart/form-data" method="post">
+
+						<img src="" style="height: 200px; width: 200px;" class="my_profile_picture"
+							th:src="@{'/img/'+${user.imageUrl}}" alt="profile photo" />
+
+						<table class="table mt-4">
+							<tbody>
+								<tr>
+									<th scope="col">#USERID</th>
+									<th scope="col">CCK<span th:text="${user.id}"></span></th>
+								</tr>
+								<tr>
+
+								</tr>
+
+								<tr>
+									<th scope="row">Email</th>
+									<td><span th:text="${user.email}"></span></td>
+								</tr>
+
+								<tr>
+									<th scope="row">Role</th>
+									<td><span th:text="${user.role}"></span></td>
+								</tr>
+
+								<tr>
+									<th scope="row">Account Active</th>
+									<td><span th:text="${user.enabled}"></span></td>
+								</tr>
+
+								<tr>
+									<th scope="row">Description</th>
+									<td><textarea name="about" th:text="${user.about}" class="form-control"
+											id="form-about" rows="3" placeholder="Enter about yourself"></textarea></td>
+								</tr>
+								<tr>
+									<th scope="row">New Profile Picture</th>
+									<td>
+										<div class="custom-file">
+											<input type="file" name="profileImage" />
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="container text-center">
+							<button type="submit" class="btn btn-lg btn-warning">Save</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<script>
+			$(document).ready(() => {
+				$(".item").removeClass("active");
+				$("#profile-link").addClass("active");
+				$(".nav-item").removeClass("active");
+				$("#profile-route").addClass("active");
+			});
+		</script>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>This is home page</title>
+</head>
+
+<body>
+
+
+
+	<section class="about-section py-5 bg-success">
+
+		<div class="container">
+			<h1 class="text-center font-weight-bold  mb-6">About Clever
+				Contact Keeper</h1>
+			<p class="text-center mb-5 font-weight-normal">Clever Contact
+				Keeper is an innovative application designed to help you manage and
+				organize your contacts effortlessly. Here are five key features that
+				make it stand out:</p>
+
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="card  text-white bg-primary text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">1. User-Friendly Interface</h5>
+							<p class="card-text">Our intuitive design ensures that anyone
+								can navigate the app with ease, making contact management simple
+								and efficient.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card card text-white bg-secondary text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">2. Customizable Tags</h5>
+							<p class="card-text">Easily categorize your contacts with
+								customizable tags, allowing for quick access and better
+								organization.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">3. Reminders for Follow-Ups</h5>
+							<p class="card-text">Never miss an important connection
+								again! Set reminders for follow-ups to maintain your
+								relationships.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card card text-white bg-danger text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">4. Multi-Device Sync</h5>
+							<p class="card-text">Access your contacts anytime, anywhere.
+								Our app syncs seamlessly across all your devices.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card text-white bg-warning text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">5. Privacy and Security</h5>
+							<p class="card-text">Your data is safe with us. We prioritize
+								your privacy and implement robust security measures to protect
+								your information.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card text-white bg-info text-center shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title">6. Advanced Search Functionality</h5>
+							<p class="card-text">Quickly find any contact with our
+								powerful search feature, allowing you to filter by name, tags,
+								or other criteria.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center mt-5">
+				<a th:href="@{signin}" class="btn btn-primary btn-lg">Get
+					Started with Clever Contact Keeper</a>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>
